@@ -17,10 +17,13 @@ const Cadastro = () => {
       const resposta = await fetch('colocar o link host de java', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json ; charset=UTF-8',
         },
         body: JSON.stringify(dadosCadastro),
-      });
+      }).then(() => {
+        window.location = '/'
+        })
+      
 
       if (resposta.ok) {
         console.log('Cadastro realizado com sucesso!');
