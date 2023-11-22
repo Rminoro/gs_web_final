@@ -17,16 +17,16 @@ const Cadastro = () => {
       const resposta = await fetch('colocar o link host de java', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json ; charset=UTF-8',
+          'Content-Type': 'application/json; charset=UTF-8',
         },
         body: JSON.stringify(dadosCadastro),
-      }).then(() => {
-        window.location = '/'
-        })
-      
+      });
 
+      // Agora verificamos se a resposta está ok
       if (resposta.ok) {
         console.log('Cadastro realizado com sucesso!');
+        // Se desejar redirecionar após o sucesso, descomente a linha abaixo
+        // window.location = '/'
       } else {
         console.error('Erro ao cadastrar usuário.');
       }
