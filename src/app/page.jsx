@@ -8,8 +8,9 @@ export default function Cadastro() {
 
 
 
+  <Link href="/menu/covid">a</Link>
 
-<Link href='/informativos/covid'>COVID</Link>
+
 
 
 

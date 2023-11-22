@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default function mortalidade(){
+export default function Mortalidade() {
+    return (
     <div>
         <h1>
         Como era a vida antes das vacinas: mil crianças paralisadas por dia e doenças com 50% de mortalidade
@@ -33,6 +34,7 @@ export default function mortalidade(){
             sendo de quase 100% para raiva, 50% para tuberculose, 25% a 50% para cólera e 30% para varíola. 
             A varíola foi a primeira doença a ser considerada erradicada no mundo pela OMS, em 1980, devido aos esforços de imunização.
         </p>
-
+        
     </div>
+ );
 }
