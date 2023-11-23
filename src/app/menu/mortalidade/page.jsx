@@ -1,8 +1,9 @@
 import Link from "next/link";
+import styles from "./mortalidade.module.scss";
 
 export default function Mortalidade() {
-    return (
-    <div>
+  return (
+    <div className={styles.mortalidade}>
         <h1>
         Como era a vida antes das vacinas: mil crianças paralisadas por dia e doenças com 50% de mortalidade
         </h1>
