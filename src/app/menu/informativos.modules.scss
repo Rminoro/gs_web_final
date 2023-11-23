@@ -1,0 +1,28 @@
+
+.containerPrincipal {
+  text-align: center;
+  padding: 20px;
+  background-color: #bdf2d8;
+
+  h1 {
+    color: #03100a;
+  }
+
+  p {
+    color: #03100a;
+  }
+
+  a {
+    color: #53dc98;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}

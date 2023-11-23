@@ -15,7 +15,7 @@ const Cadastro = () => {
     const dadosCadastro = { nome, idade, cpf, email, telefone };
 
     try {
-      const resposta = await fetch('http://localhost:8080/NTJ-Health/api/paciente', {
+      const resposta = await fetch('http://localhost:3000/api/cadastro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',

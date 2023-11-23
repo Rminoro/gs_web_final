@@ -1,8 +1,9 @@
 import Link from "next/link";
+import styles from "@/app/menu/Informativos.modules.scss";
 
 export default function covid(){
     return(
-        <div>
+        <div className={styles.pageContainer}>
             <h1> A importância de se vacinar contra COVID-19 </h1>
         
                 <p>
