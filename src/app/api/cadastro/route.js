@@ -40,11 +40,11 @@ export async function POST(dados) {
             },
             body: JSON.stringify(dados),
         });
-
+        console.log(dados)
         if (response.ok) {
             // A resposta está no formato JSON, então você pode retornar os dados.
             const responseData = await response.json();
-
+            
             // Realize ações adicionais, se necessário, com os dados recebidos.
 
             console.log('Cadastro realizado com sucesso!', responseData);
