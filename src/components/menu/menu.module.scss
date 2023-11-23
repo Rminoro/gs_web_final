@@ -1,0 +1,29 @@
+// Menu.module.scss
+.menu {
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        background-color: #3A6604;
+        padding: 10px;
+        border-radius: 5px;
+      }
+  
+      li {
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      a {
+        color: #A4EA4F;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+  
+      a:hover {
+        color: white;
+      }
+    }
+  }
+  
