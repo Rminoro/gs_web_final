@@ -10,7 +10,7 @@ const Principal = () => {
       <h1>NTJ-Health</h1>
       <Menu />
       <Link href="/informativos/cartilha">
-                CARTILHA
+                Consultar cartilha
             </Link>
     </div>
   );

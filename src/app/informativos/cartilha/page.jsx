@@ -157,6 +157,7 @@
 //
 // 
 // pages/editar-tabela/[id].js
+// 
 "use client"
 import { useState } from 'react';
 
@@ -181,15 +182,15 @@ const EditarTabela = () => {
     dengue: '',
     covid19: '',
     idPaciente: '',
-    // Adicione as demais propriedades da tabela aqui
+    // Adicione outras propriedades da tabela aqui
   });
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const handleChangeId = (event) => {
     setId(event.target.value);
   };
 
   const handleSearch = () => {
-    // Realize uma solicitação à API Java para obter os dados da tabela com base no ID
     fetch(`http://localhost:8080/sua-aplicacao-java/api/tabela/${id}`)
       .then((response) => response.json())
       .then((data) => setTabela(data))
@@ -201,10 +202,13 @@ const EditarTabela = () => {
     setTabela((prevTabela) => ({ ...prevTabela, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleEditClick = () => {
+    setIsEditMode(true);
+  };
+
+  const handleSave = (event) => {
     event.preventDefault();
 
-    // Envie os dados atualizados para a API Java
     fetch(`http://localhost:8080/sua-aplicacao-java/api/tabela/${id}`, {
       method: 'PUT',
       headers: {
@@ -215,6 +219,7 @@ const EditarTabela = () => {
       .then((response) => {
         if (response.ok) {
           console.log('Dados da tabela atualizados com sucesso!');
+          setIsEditMode(false);
         } else {
           console.error('Erro ao atualizar dados da tabela. Status:', response.status);
         }
@@ -229,85 +234,106 @@ const EditarTabela = () => {
         ID da Tabela:
         <input type="text" value={id} onChange={handleChangeId} />
       </label>
-      <button onClick={handleSearch}>Pesquisar e Editar</button>
-
-      <form onSubmit={handleSubmit}>
-        {/* Adicione campos para as propriedades da tabela aqui */}
-        <label>
-        <div>
-          BCG:
-          <input type="text" name="bcg" value={tabela.bcg} onChange={handleChange} />
-        </div>
-        <div>
-          HepatiteB:
-          <input type="text" name="HepatiteB" value={tabela.hepatiteB } onChange={handleChange} />
-        </div>
-          <div>
-          rotavirus:
-          <input type="text" name="rotavirus" value={tabela.rotavirus} onChange={handleChange} />
-          </div>
-          <div>
-          dtpa:
-          <input type="text" name="dtpa" value={tabela.dtpa} onChange={handleChange} />
-          </div>
-          <div>
+      <button onClick={handleSearch}>Pesquisar</button>
+      <br />
+      {isEditMode ? (
+        <form onSubmit={handleSave}>
+          <label>
+            BCG:
+            <input type="text" name="bcg" value={tabela.bcg} onChange={handleChange} />
+          </label>
+          <label>
+            Hepatite B:
+            <input type="text" name="hepatiteB" value={tabela.hepatiteB} onChange={handleChange} />
+          </label>
+          <label>
+            dtpa  :
+            <input type="text" name="dtpa" value={tabela.dtpa} onChange={handleChange} />
+          </label>
+          <label>
           vip:
-          <input type="text" name="vip" value={tabela.vip} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="rotavirus" value={tabela.vip} onChange={handleChange} />
+          </label>
+          <label>
           hib:
-          <input type="text" name="hib" value={tabela.hib} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="hib" value={tabela.hib} onChange={handleChange} />
+          </label>
+          <label>
           vpc10:
-          <input type="text" name="vpc10" value={tabela.vpc10} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="vpc10" value={tabela.vpc10} onChange={handleChange} />
+          </label>
+          <label>
           meningococicasConjugadas:
-          <input type="text" name="meningococicasConjugadas" value={tabela.meningococicasConjugadas} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="meningococicasConjugadas" value={tabela.meningococicasConjugadas} onChange={handleChange} />
+          </label>
+          <label>
           meningococicaB:
-          <input type="text" name="meningococicaB" value={tabela.meningococicaB} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="meningococicaB" value={tabela.meningococicaB} onChange={handleChange} />
+          </label>
+          <label>
           influenza:
-          <input type="text" name="influenza" value={tabela.influenza} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="influenza" value={tabela.influenza} onChange={handleChange} />
+          </label>
+          <label>
           febreAmarela:
-          <input type="text" name="febreAmarela" value={tabela.febreAmarela} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="febreAmarela" value={tabela.febreAmarela} onChange={handleChange} />
+          </label>
+          <label>
           scr:
-          <input type="text" name="scr" value={tabela.scr} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="scr" value={tabela.scr} onChange={handleChange} />
+          </label>
+          <label>
           varicela:
-          <input type="text" name="varicela" value={tabela.varicela} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="varicela" value={tabela.varicela} onChange={handleChange} />
+          </label>
+          <label>
           hepatiteA:
-          <input type="text" name="hepatiteA" value={tabela.hepatiteA} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="hepatiteA" value={tabela.hepatiteA} onChange={handleChange} />
+          </label>
+          <label>
           hpv4:
-          <input type="text" name="hpv4" value={tabela.hpv4} onChange={handleChange} />
-          </div>
-          <div>
+            <input type="text" name="hpv4" value={tabela.hpv4} onChange={handleChange} />
+          </label>
+          <label>
           dengue:
-          <input type="text" name="dengue" value={tabela.dengue} onChange={handleChange} />
-          </div>
+            <input type="text" name="dengue" value={tabela.dengue} onChange={handleChange} />
+          </label>
+          <label>
           covid19:
-          <input type="text" name="covid19" value={tabela.covid19} onChange={handleChange} />
-            
-        </label>
+            <input type="text" name="covid19" value={tabela.covid19} onChange={handleChange} />
+          </label>
 
-        <button type="submit">Salvar Alterações</button>
-      </form>
+          <button type="submit">Salvar Alterações</button>
+        </form>
+      ) : (
+        <div>
+          <h2>Informações da Tabela</h2>
+          <p>BCG: {tabela.bcg}</p>
+          <p>Hepatite B: {tabela.hepatiteB}</p>
+          <p>Rotavírus: {tabela.rotavirus}</p>
+          <p>dtpa: {tabela.dtpa}</p>
+          <p>vip: {tabela.vip}</p>
+          <p>hib: {tabela.hib}</p>
+          <p>vpc10: {tabela.vpc10}</p>
+          <p>meningococicasConjugadas: {tabela.meningococicasConjugadas}</p>
+          <p>meningococicaB: {tabela.meningococicaB}</p>
+          <p>influenza: {tabela.influenza}</p>
+          <p>febreAmarela: {tabela.febreAmarela}</p>
+          <p>varicela: {tabela.varicela}</p>
+          <p>hepatiteA: {tabela.hepatiteA}</p>
+          <p>hpv4: {tabela.hpv4}</p>
+          <p>dengue: {tabela.dengue}</p>
+          <p>covid19: {tabela.covid19}</p>
+
+
+
+          
+          
+          <button onClick={handleEditClick}>Editar</button>
+        </div>
+      )}
     </div>
   );
 };
 
 export default EditarTabela;
-
