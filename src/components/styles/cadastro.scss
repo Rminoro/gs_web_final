@@ -1,0 +1,75 @@
+// Cadastro.module.scss
+
+div {
+  text-align: center;
+  padding: 20px;
+  background-color: #bdf2d8;
+  border-color: #03100a;
+
+  h1 {
+    color: #03100a;
+    background-color: #bdf2d8;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border-color: #03100a;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-color: #03100a;
+
+      th, td {
+        border: 2px solid #03100a;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #53dc98;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #bdf2d8;
+      }
+
+      tr:nth-child(odd) {
+        background-color: white;
+      }
+    }
+
+    label {
+      margin-bottom: 10px;
+      color: #03100a;
+
+      input {
+        padding: 8px;
+        border: 2px solid #03100a;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #53dc98;
+      border: 2px solid #53dc98;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      border-color: #03100a;
+
+      &:hover {
+        background-color: #03100a;
+        color: #53dc98;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import rodapeStyle from '@/components/styles/rodape.scss';
 
 export default function Rodape() {
   return (

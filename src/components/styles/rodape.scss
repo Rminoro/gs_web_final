@@ -1,0 +1,26 @@
+// Rodape.module.scss
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #bdf2d8;
+    padding: 20px;
+  
+    div {
+      h2 {
+        color: #03100a;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        li {
+          color: #03100a;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  

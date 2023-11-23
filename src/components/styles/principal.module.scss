@@ -1,15 +1,59 @@
 // principal.module.scss
+
 .principal {
-    div {
+  background-color: #bdf2d8;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    color: #03100a;
+  }
+
+  // Importando os estilos do componente Menu
+  .menu {
+    padding: 20px;
+    text-align: center;
+
+    nav {
       display: flex;
       flex-direction: column;
-  
-      h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
+      align-items: center;
+
+      div {
+        background-color: #53dc98;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        p {
+          margin: 0;
+          color: white;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 10px;
+
+          a {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #53dc98;
+            border-radius: 10px;
+            color: #53dc98;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+              background-color: #53dc98;
+              color: white;
+            }
+          }
+        }
       }
     }
-  
-    // Adicione estilos adicionais conforme necessário
   }
-  
+}

@@ -1,4 +1,5 @@
 "use client"
+import menuStyle from '@/components/styles/cadastro.scss'
 import React, { useState } from 'react';
 
 const Cadastro = () => {
@@ -36,7 +37,7 @@ const Cadastro = () => {
   };
 
   return (
-    <div>
+    <div >
       <h1>Cadastro de Paciente</h1>
       <form onSubmit={handleSubmit}>
         <label>
