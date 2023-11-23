@@ -3,6 +3,7 @@ import menuStyle from '@/components/styles/cadastro.scss'
 import React, { useState } from 'react';
 
 const Cadastro = () => {
+  const [id, setId] = useState('');
   const [nome, setNome] = useState('');
   const [idade, setIdade] = useState('');
   const [cpf, setCpf] = useState('');
@@ -12,7 +13,7 @@ const Cadastro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dadosCadastro = { nome, idade, cpf, email, telefone };
+    const dadosCadastro = { id, nome, idade, cpf, email, telefone };
 
     try {
       const resposta = await fetch('http://localhost:3000/api/cadastro', {
@@ -23,14 +24,7 @@ const Cadastro = () => {
         body: JSON.stringify(dadosCadastro),
       });
 
-      // Agora verificamos se a resposta está ok
-      if (resposta.ok) {
-        console.log('Cadastro realizado com sucesso!');
-        // Se desejar redirecionar após o sucesso, descomente a linha abaixo
-        // window.location = '/'
-      } else {
-        console.error('Erro ao cadastrar usuário.');
-      }
+   
     } catch (erro) {
       console.error('Erro na requisição:', erro);
     }
@@ -40,6 +34,10 @@ const Cadastro = () => {
     <div >
       <h1>Cadastro de Paciente</h1>
       <form onSubmit={handleSubmit}>
+      <label>
+          Id:
+          <input type="number" value={id} onChange={(e) => setId(e.target.value)} />
+        </label>
         <label>
           Nome:
           <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />

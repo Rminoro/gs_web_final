@@ -14,7 +14,7 @@ const Menu = () => {
         <ul>
           <li>
             <Link href="/informativos/cadastro">
-                clique aqui para efetuar Cadastro
+                clique aqui para efetuar Cadastroo seu paciente
             </Link>
           </li>
           <li>
