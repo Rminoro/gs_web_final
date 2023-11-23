@@ -10,7 +10,7 @@ const Pacientes = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:4567/api/pacientes');
+      const response = await fetch('http://localhost:8080/NTJ-Health/api/paciente/listar');
       if (response.ok) {
         const data = await response.json();
         setPacientes(data);
