@@ -95,7 +95,7 @@ const Cadastro = () => {
     };
 
     try {
-      const resposta = await fetch('http://localhost:3000/api/cadastro', {
+      const resposta = await fetch('http://localhost:8080/NTJ-Health/api/paciente', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
@@ -106,6 +106,7 @@ const Cadastro = () => {
       if (resposta.ok) {
         console.log('Cadastro realizado com sucesso!');
         // Realize ações adicionais, se necessário.
+        console.log(dadosCadastro)
       } else {
         console.error('Erro ao cadastrar paciente:', resposta.status, resposta.statusText);
       }
