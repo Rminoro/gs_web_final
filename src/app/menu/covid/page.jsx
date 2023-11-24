@@ -13,15 +13,14 @@ export default function covid(){
                     Por ano, a vacinação evita de dois a três milhões de mortes, segundo a Organização Mundial da Saúde (OMS).
                 </p>
 
-                <p>
+               
                     <h2>Por isso dizemos que:</h2>
                     <p>
                         a vacinação é tão importante para sua saúde quanto o consumo de uma dieta saudável e a prática de atividade física;
                         estar vacinado(a) pode significar a diferença entre estar vivo(a) e saudável ou gravemente enfermo(a) ou com sequelas deixadas por doenças imunopreveníveis;
                         as vacinas estão entre os produtos farmacêuticos mais seguros que existem.
                     </p>
-                </p>
-
+               
                 <p>
                   Por que se vacinar contra COVID-19?
                     
