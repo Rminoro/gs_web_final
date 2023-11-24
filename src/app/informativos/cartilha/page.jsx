@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import styles from '@/components/styles/cadastro.scss';
+import Link from 'next/link';
 
 const PesquisarTabela = () => {
   const [id, setId] = useState('');
@@ -31,7 +32,7 @@ const PesquisarTabela = () => {
   
 
   return (
-    <div className={styles.container}>
+    <div className="conteudo">
       <h1>Pesquisar Tabela</h1>
       <label>
         ID da Tabela:
@@ -40,30 +41,80 @@ const PesquisarTabela = () => {
       <button onClick={handleSearch}>Pesquisar</button>
       <br />
       {isLoaded && (
-        <div>
-          <h2>Informações da Tabela</h2>
-          <p>BCG: {tabela.bcg}</p>
-          <p>Hepatite B: {tabela.hepatiteB}</p>
-          <p>Rotavírus: {tabela.rotavirus}</p>
-          <p>dtpa: {tabela.dtpa}</p>
-          <p>vip: {tabela.vip}</p>
-          <p>hib: {tabela.hib}</p>
-          <p>vpc10: {tabela.vpc10}</p>
-          <p>meningococicasConjugadas: {tabela.meningococicasConjugadas}</p>
-          <p>meningococicaB: {tabela.meningococicaB}</p>
-          <p>influenza: {tabela.influenza}</p>
-          <p>febreAmarela: {tabela.febreAmarela}</p>
-          <p>scr: {tabela.scr}</p>
-          <p>varicela: {tabela.varicela}</p>
-          <p>hepatiteA: {tabela.hepatiteA}</p>
-          <p>hpv4: {tabela.hpv4}</p>
-          <p>dengue: {tabela.dengue}</p>
-          <p>covid19: {tabela.covid19}</p>
-          <p>idPaciente: {tabela.idPaciente}</p>
+        <div className={styles.container}>
           
+          <h2>Informações da Tabela</h2>
 
+          <form>
+          <table>
+            <tr>
+            <td>BCG: {tabela.bcg}</td>  
+            </tr>
+            <tr>
+            <td>Hepatite B: {tabela.hepatiteB}</td>
+            </tr>
+            <tr>
+            <td>Rotavírus: {tabela.rotavirus}</td>
+            </tr>
+            <tr>
+            <td>dtpa: {tabela.dtpa}</td>
+            </tr>
+            <tr>
+            <td>vip: {tabela.vip}</td>
+            </tr>
+            <tr>
+            <td>hib: {tabela.hib}</td>
+            </tr>
+            <tr>
+            <td>vpc10: {tabela.vpc10}</td>
+            </tr>
+            <tr>
+            <td>meningococicasConjugadas: {tabela.meningococicasConjugadas}</td>
+            </tr>
+            <tr>
+            <td>meningococicaB: {tabela.meningococicaB}</td>
+            </tr>
+            <tr>
+            <td>influenza: {tabela.influenza}</td>
+            </tr>
+            <tr>
+            <td>febreAmarela: {tabela.febreAmarela}</td>
+            </tr>
+            <tr>
+            <td>scr: {tabela.scr}</td>
+            </tr>
+            <tr>
+            <td>varicela: {tabela.varicela}</td>
+            </tr>
+            <tr>
+            <td>hepatiteA: {tabela.hepatiteA}</td>
+            </tr>
+            <tr>
+            <td>hpv4: {tabela.hpv4}</td>
+            </tr>
+            <tr>
+            <td>dengue: {tabela.dengue}</td>
+            </tr>
+            <tr>
+            <td>covid19: {tabela.covid19}</td>
+            </tr>
+            <tr>
+            <td>idPaciente: {tabela.idPaciente}</td>
+            </tr>
+           
+          </table>
+          </form>
 
-          {/* Adicione outros campos conforme necessário */}
+          <h3>
+            <Link href="/informativos/alterarCartilha">
+                Clique aqui para alterar as informações da cartilha do paciente
+            </Link>
+            </h3>
+            <h3>
+            <Link href="/informativos/cadastro">
+                Caso necessário volte para o trabalho
+            </Link>
+            </h3>
         </div>
       )}
     </div>

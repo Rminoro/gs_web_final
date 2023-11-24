@@ -1,5 +1,4 @@
-
-div {
+div.conteudo {
   text-align: center;
   padding: 20px;
   background-color: #bdf2d8;
@@ -9,6 +8,32 @@ div {
     color: #03100a;
     background-color: #bdf2d8;
   }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-color: #03100a;
+
+    th, td {
+      border: 2px solid #03100a;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #53dc98;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #bdf2d8;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+  }
 
   form {
     display: flex;
@@ -16,32 +41,6 @@ div {
     align-items: center;
     margin-top: 20px;
     border-color: #03100a;
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      border-color: #03100a;
-
-      th, td {
-        border: 2px solid #03100a;
-        padding: 8px;
-        text-align: center;
-      }
-
-      th {
-        background-color: #53dc98;
-        color: white;
-      }
-
-      tr:nth-child(even) {
-        background-color: #bdf2d8;
-      }
-
-      tr:nth-child(odd) {
-        background-color: white;
-      }
-    }
 
     label {
       display: flex; 

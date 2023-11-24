@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import cartilhaStyles from '../../../components/styles/styleCart.module.scss';
+import styles from '@/components/styles/cadastro.scss';
 
 
 const AlterarTabela = () => {
@@ -70,7 +70,7 @@ const AlterarTabela = () => {
 
   return (
 
-    <div className={cartilhaStyles.container}>
+    <div className="conteudo">
       <h1>Alterar Tabela</h1>
       <label>
         ID da Tabela:
@@ -85,6 +85,7 @@ const AlterarTabela = () => {
 
           <h2>Atualizar Dados</h2>
         
+        <table>
           <label>
             BCG:
             <input type="text" name="bcg" value={novosValores.bcg} onChange={handleChangeNovosValores} />
@@ -175,8 +176,9 @@ const AlterarTabela = () => {
             <input type="text" name="idPaciente" value={novosValores.idPaciente} onChange={handleChangeNovosValores} />
           </label>
           <br />
-         
+          
           <button onClick={handleUpdate}>Atualizar</button>
+          </table>
         </div>
       )}
     </div>

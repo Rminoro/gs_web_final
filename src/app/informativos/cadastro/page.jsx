@@ -47,7 +47,7 @@ const Cadastro = () => {
   };
 
   return (
-    <div>
+    <div className='conteudo'>
       <h1>Cadastro de Paciente</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -86,7 +86,8 @@ const Cadastro = () => {
       <Link href="/informativos/alterarCartilha">
                 Clique aqui para alterar as informações da cartilha do paciente
             </Link>
-        
+      </h3>
+      <h3>
             <Link href="/informativos/cartilha">
                 Caso o paciente já tenha cadastro, Clique aqui para consultar
             </Link>
