@@ -1,12 +1,18 @@
-
-.header {
-  background-color:  #53dc98;
-  padding: 20px;
-  text-align: center;
-
+#headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #bdf2d8;
   
-  .logo {
-    width: 50%;
-    height: 50%;
+    .header {
+      background-color: #53dc98;
+      padding: 20px;
+      text-align: center;
+  
+      .logo {
+        width: 50%;
+        height: 50%;
+      }
+    }
   }
-}
+  

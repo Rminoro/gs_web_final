@@ -10,9 +10,7 @@ const Principal = () => {
     <div className={styles.principal}>
       <h1>Bem vindo a ImmunoSync</h1>
       <Menu />
-      <Link href="/informativos/cartilha">
-                Consultar cartilha
-            </Link>
+      
            
     </div>
   );
