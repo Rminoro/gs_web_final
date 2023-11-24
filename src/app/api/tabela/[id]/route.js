@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   
     if (req.method === 'GET') {
       try {
-        const response = await fetch(`URL_DO_SEU_BACKEND/tabela/${id}`);
+        const response = await fetch(`http://localhost:8080/NTJ-Health/api/tabela/${id}`);
         const data = await response.json();
         res.status(200).json(data);
       } catch (error) {
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       }
     } else if (req.method === 'PUT') { // Corrigido para "else if"
       try {
-        const response = await fetch(`URL_DO_SEU_BACKEND/tabela/${id}`, {
+        const response = await fetch(`http://localhost:8080/NTJ-Health/api/tabela/${id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

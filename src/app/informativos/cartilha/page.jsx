@@ -32,7 +32,7 @@ const EditarTabela = () => {
   };
 
   const handleSearch = () => {
-    fetch(`http://localhost:8080/sua-aplicacao-java/api/tabela/${id}`)
+    fetch(`http://localhost:8080/NTJ-Health/api/tabela/${id}`)
       .then((response) => response.json())
       .then((data) => setTabela(data))
       .catch((error) => console.error('Erro ao obter dados da tabela:', error));
@@ -50,7 +50,7 @@ const EditarTabela = () => {
   const handleSave = (event) => {
     event.preventDefault();
 
-    fetch(`http://localhost:8080/sua-aplicacao-java/api/tabela/${id}`, {
+    fetch(`http://localhost:8080/NTJ-Health/api/tabela/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
