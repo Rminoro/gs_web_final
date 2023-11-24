@@ -83,13 +83,13 @@ const Cadastro = () => {
       </form>
       <br/>
       <h3>
-      {/* <Link href="/informativos/alterarCartilha">
+      <Link href="/informativos/alterarCartilha">
                 Clique aqui para alterar as informações da cartilha do paciente
             </Link>
         
             <Link href="/informativos/cartilha">
                 Caso o paciente já tenha cadastro, Clique aqui para consultar
-            </Link> */}
+            </Link>
       </h3>
     </div>
 

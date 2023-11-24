@@ -6,6 +6,7 @@ const PesquisarTabela = () => {
   const [id, setId] = useState('');
   const [tabela, setTabela] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChangeId = (event) => {
     setId(event.target.value);
@@ -17,9 +18,17 @@ const PesquisarTabela = () => {
       .then((data) => {
         setTabela(data);
         setIsLoaded(true);
+        setError(null);
+        console.log(data);
       })
-      .catch((error) => console.error('Erro ao obter dados da tabela:', error));
+      
+      .catch((error) => {
+        setIsLoaded(true);
+        setError(error.message);
+        console.error('Erro ao obter dados da tabela:', error);
+      });
   };
+  
 
   return (
     <div className={styles.container}>
