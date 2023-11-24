@@ -85,7 +85,7 @@ const AlterarTabela = () => {
 
           <h2>Atualizar Dados</h2>
         
-        <table>
+       <form>
           <label>
             BCG:
             <input type="text" name="bcg" value={novosValores.bcg} onChange={handleChangeNovosValores} />
@@ -178,8 +178,16 @@ const AlterarTabela = () => {
           <br />
           
           <button onClick={handleUpdate}>Atualizar</button>
-          </table>
+          </form>
+
+          <h3>
+            <Link href="/informativos/cadastro">Clique aqui para realizar cadastro</Link>
+          </h3>
+          <h3>
+            <Link href="/informativos/cartilha">Clique aqui para consultar cartilha do paciente</Link>
+          </h3>
         </div>
+        
       )}
     </div>
   );
