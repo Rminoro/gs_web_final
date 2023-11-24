@@ -15,20 +15,20 @@ export default function covid(){
 
                 <p>
                     <h2>Por isso dizemos que:</h2>
-                    <ul>
-                        <li>a vacinação é tão importante para sua saúde quanto o consumo de uma dieta saudável e a prática de atividade física;</li>
-                        <li>estar vacinado(a) pode significar a diferença entre estar vivo(a) e saudável ou gravemente enfermo(a) ou com sequelas deixadas por doenças imunopreveníveis;</li>
-                        <li>as vacinas estão entre os produtos farmacêuticos mais seguros que existem.</li>
-                    </ul>
+                    <p>
+                        a vacinação é tão importante para sua saúde quanto o consumo de uma dieta saudável e a prática de atividade física;
+                        estar vacinado(a) pode significar a diferença entre estar vivo(a) e saudável ou gravemente enfermo(a) ou com sequelas deixadas por doenças imunopreveníveis;
+                        as vacinas estão entre os produtos farmacêuticos mais seguros que existem.
+                    </p>
                 </p>
 
                 <p>
                   Por que se vacinar contra COVID-19?
-                    <ul>
-                        <li>Porque a vacinação é a única forma segura e eficaz de prevenir a COVID-19, de nos livrarmos da pandemia e recuperarmos o convívio social do qual tanto sentimos falta.</li>
-                        <li>Porque as vacinas aprovadas para uso no Brasil pela Agência Nacional de Vigilância Sanitária (Anvisa) são seguras e eficazes. Não há a menor possibilidade de você adquirir a COVID-19 por meio das vacinas. São vacinas inativadas, não replicantes.</li>
+                    
+                        Porque a vacinação é a única forma segura e eficaz de prevenir a COVID-19, de nos livrarmos da pandemia e recuperarmos o convívio social do qual tanto sentimos falta.
+                        Porque as vacinas aprovadas para uso no Brasil pela Agência Nacional de Vigilância Sanitária (Anvisa) são seguras e eficazes. Não há a menor possibilidade de você adquirir a COVID-19 por meio das vacinas. São vacinas inativadas, não replicantes.
 
-                    </ul>
+                    
                 </p>
                 <p>
                     Fonte:https://www.tre-se.jus.br/comunicacao/noticias/2021/Julho/importancia-e-beneficios-da-vacinacao

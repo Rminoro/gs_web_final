@@ -25,7 +25,7 @@ const Cadastro = () => {
     };
 
     try {
-      const resposta = await fetch('http://localhost:3000/api/cadastro', {
+      const resposta = await fetch('http://localhost:8080/NTJ-Health/api/paciente', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
@@ -35,8 +35,9 @@ const Cadastro = () => {
 
       if (resposta.ok) {
         console.log('Cadastro realizado com sucesso!');
-        // Realize ações adicionais, se necessário.
+  
         console.log(dadosCadastro)
+        window.location.href = '/informativos/cartilha';
       } else {
         console.error('Erro ao cadastrar paciente:', resposta.status, resposta.statusText);
       }
@@ -82,13 +83,13 @@ const Cadastro = () => {
       </form>
       <br/>
       <h3>
-      <Link href="/informativos/alterarCartilha">
+      {/* <Link href="/informativos/alterarCartilha">
                 Clique aqui para alterar as informações da cartilha do paciente
             </Link>
         
             <Link href="/informativos/cartilha">
                 Caso o paciente já tenha cadastro, Clique aqui para consultar
-            </Link>
+            </Link> */}
       </h3>
     </div>
 

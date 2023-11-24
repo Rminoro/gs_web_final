@@ -1,18 +1,30 @@
 #headerContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #bdf2d8;
-  
-    .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #bdf2d8;
+  border: 1px solid ;
+
+  .header {
       background-color: #53dc98;
       padding: 20px;
       text-align: center;
-  
+
       .logo {
-        width: 50%;
-        height: 50%;
+          width: 30px;
+          height: 50px;
       }
-    }
   }
-  
+
+  a {
+      text-decoration: none;
+      padding: 10px;
+      font-size: 16px;
+      color: #333; // Cor desejada para os links sem imagem
+
+      &:not(:first-child) {
+          font-size: 18px; // Tamanho de fonte desejado para os links que não são o primeiro filho
+          font-weight: bold; // Pode ajustar o peso da fonte conforme necessário
+      }
+  }
+}

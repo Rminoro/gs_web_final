@@ -35,6 +35,9 @@ export default function Mortalidade() {
             sendo de quase 100% para raiva, 50% para tuberculose, 25% a 50% para cólera e 30% para varíola. 
             A varíola foi a primeira doença a ser considerada erradicada no mundo pela OMS, em 1980, devido aos esforços de imunização.
         </p>
+        <p>
+            Fonte:https://butantan.gov.br/noticias/como-era-a-vida-antes-das-vacinas-mil-criancas-paralisadas-por-dia-e-doencas-com-50-de-mortalidade
+        </p>
         
     </div>
  );
