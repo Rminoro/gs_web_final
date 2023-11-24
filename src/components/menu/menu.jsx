@@ -8,7 +8,7 @@ const Menu = () => {
       <nav>
         <div>
           <p>
-            Seja bem vindo ao NTJ-Health, por favor efetue o cadastro para poder acompanhar as suas vacinas
+            Seja bem vindo ao ImmunoSync, por favor efetue o cadastro para poder acompanhar as suas vacinas
           </p>
         </div>
         <ul>

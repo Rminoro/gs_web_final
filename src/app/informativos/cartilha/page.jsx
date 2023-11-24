@@ -36,6 +36,24 @@ const PesquisarTabela = () => {
           <p>BCG: {tabela.bcg}</p>
           <p>Hepatite B: {tabela.hepatiteB}</p>
           <p>Rotavírus: {tabela.rotavirus}</p>
+          <p>dtpa: {tabela.dtpa}</p>
+          <p>vip: {tabela.vip}</p>
+          <p>hib: {tabela.hib}</p>
+          <p>vpc10: {tabela.vpc10}</p>
+          <p>meningococicasConjugadas: {tabela.meningococicasConjugadas}</p>
+          <p>meningococicaB: {tabela.meningococicaB}</p>
+          <p>influenza: {tabela.influenza}</p>
+          <p>febreAmarela: {tabela.febreAmarela}</p>
+          <p>scr: {tabela.scr}</p>
+          <p>varicela: {tabela.varicela}</p>
+          <p>hepatiteA: {tabela.hepatiteA}</p>
+          <p>hpv4: {tabela.hpv4}</p>
+          <p>dengue: {tabela.dengue}</p>
+          <p>covid19: {tabela.covid19}</p>
+          <p>idPaciente: {tabela.idPaciente}</p>
+          
+
+
           {/* Adicione outros campos conforme necessário */}
         </div>
       )}

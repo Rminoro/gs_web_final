@@ -1,41 +1,45 @@
+$corPrincipal: #53dc98;
+$corTexto: #03100a;
+$corFundoClaro: #bdf2d8;
 
+.component{
 div {
   text-align: center;
   padding: 20px;
-  background-color: #bdf2d8;
-  border-color: #03100a;
+  background-color: $corFundoClaro;
+  border-color: $corTexto;
 
   h1 {
-    color: #03100a;
-    background-color: #bdf2d8;
+    color: $corTexto;
+    background-color: $corFundoClaro;
   }
 
   form {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    border-color: #03100a;
+    border-color: $corTexto;
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      border-color: #03100a;
+      border-color: $corTexto;
 
       th, td {
-        border: 2px solid #03100a;
+        border: 2px solid $corTexto;
         padding: 8px;
         text-align: center;
       }
 
       th {
-        background-color: #53dc98;
+        background-color: $corPrincipal;
         color: white;
       }
 
       tr:nth-child(even) {
-        background-color: #bdf2d8;
+        background-color: $corFundoClaro;
       }
 
       tr:nth-child(odd) {
@@ -44,34 +48,35 @@ div {
     }
 
     label {
-      display: flex; 
+      display: flex;
       flex-direction: column;
       margin-bottom: 10px;
-      color: #03100a;
+      color: $corTexto;
 
       input {
         padding: 8px;
-        border: 2px solid #03100a;
+        border: 2px solid $corTexto;
         border-radius: 5px;
-        margin-top: 5px; 
+        margin-top: 5px;
       }
     }
 
     button {
       padding: 10px 20px;
-      background-color: #53dc98;
-      border: 2px solid #53dc98;
+      background-color: $corPrincipal;
+      border: 2px solid $corPrincipal;
       border-radius: 10px;
       color: white;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
-      border-color: #03100a;
-      margin-top: 10px; 
+      border-color: $corTexto;
+      margin-top: 10px;
 
       &:hover {
-        background-color: #03100a;
-        color: #53dc98;
+        background-color: $corTexto;
+        color: $corPrincipal;
       }
     }
   }
+}
 }
